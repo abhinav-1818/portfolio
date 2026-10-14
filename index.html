@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Abhinav The Series</title>
+  <meta name="description"
+    content="Abhinav Dongrajkar — Cloud and DevOps Engineer. A cinematic, streaming-inspired portfolio.">
+  <meta name="theme-color" content="#07070a">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+  <!-- 1. OPENING -->
+<div id="open">
+  <button id="skip">SKIP INTRO</button>
+  <div class="o-glow"></div>
+  <div class="o-title">
+    <p class="o-pre"></p>
+    <h1 class="o-name"></h1>
+    <p class="o-series"></p>
+  </div>
+  <img class="o-pic" alt="">
+  <p class="o-tag"></p>
+</div>
+
+
+
+  <canvas id="fx"></canvas>
+  <div id="cur"></div>
+  <!-- 3. NAVIGATION -->
+  <header id="nav"><a class="logo" href="#home"><b>A</b> SERIES</a>
+    <nav id="links"></nav>
+    <button class="btn sm" id="who-btn"></button>
+  </header>
+  <main id="app">
+    <!-- 4. HERO -->
+    <section id="home" class="hero">
+  <div class="hero-text">
+    <p class="eyebrow"></p>
+    <h1 id="big"></h1>
+    <p class="series"></p>
+    <p class="meta" id="meta"></p>
+    <p class="role" id="role"></p>
+    <p class="lead" id="lead"></p>
+    <div class="hero-btns">
+      <button class="btn" id="play">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.6v14.8a1 1 0 0 0 1.5.86l12-7.4a1 1 0 0 0 0-1.72l-12-7.4A1 1 0 0 0 7 4.6z"/></svg>Play Intro
+      </button>
+    
+<a class="btn dark" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+       stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 4v11M7.5 11l4.5 4.5 4.5-4.5M6 20h12"/>
+  </svg>
+  View Resume
+</a>
+
+      <a class="btn circle" href="#s-about" aria-label="About me">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".7" fill="currentColor" stroke-width="1.4"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="portrait">
+    <img id="pic" alt="Portrait of Abhinav Dongrajkar">
+    <span class="chip c1"></span>
+    <span class="chip c2"></span>
+    <span class="chip c3"></span>
+  </div>
+</section>
+  
+     <!-- Continue Exploring -->
+      <section id="continue">
+  <div class="c-head">
+    <h3>Continue Exploring</h3>
+    <p>Progress shows what you've watched so far</p>
+  </div>
+  <div class="c-wrap">
+    <button class="arr l" id="cL" aria-label="Previous">‹</button>
+    <div class="rail" id="cont"></div>
+    <button class="arr r" id="cR" aria-label="Next">›</button>
+  </div>
+</section>
+
+
+
+    <!-- 5. SECTIONS (their order changes with the profile) -->
+    <section id="s-about" data-s="about" class="rv">
+      <p class="k"></p>
+      <h2></h2>
+      <div id="about"></div>
+    </section>
+    <section id="s-journey" data-s="journey" class="rv">
+      <p class="k"></p>
+      <h2></h2>
+      <div id="tabs" class="tabs"></div>
+      <div id="season"></div>
+    </section>
+    <section id="s-originals" data-s="originals" class="rv">
+      <p class="k"></p>
+      <h2></h2>
+     <div class="c-wrap project-wrap">
+  <button class="arr r" id="projectNext" aria-label="Next projects">❯</button>
+  <div id="projects" class="rail"></div>
+</div>
+    </section>
+    <section id="s-picks" data-s="picks" class="rv">
+      <p class="k"></p>
+      <h2></h2>
+
+
+      <!-- That for Abhinav Picks Section -->
+
+     <div class="c-wrap" id="pkWrap">
+  <button class="arr l" id="pL" aria-label="Previous">‹</button>
+  <div id="picks" class="rail picks"></div>
+  <button class="arr r" id="pR" aria-label="Next">›</button>
+</div>
+
+
+
+
+
+    </section>
+    <section id="s-skills" data-s="skills" class="rv">
+      <p class="k"></p>
+      <h2></h2>
+      <div class="skills">
+        <div id="cats"></div>
+        <div>
+          <div id="tiles" class="tiles"></div>
+          <p id="ev" class="ev"></p>
+        </div>
+      </div>
+    </section>
+    <section id="s-moments" data-s="moments" class="rv">
+      <p class="k"></p>
+      <h2></h2>
+      <div id="ach" class="posters"></div>
+      <h3 class="sub">Certifications</h3>
+      <div id="certs" class="rail certs"></div>
+    </section>
+    <section id="s-story" data-s="story" class="rv">
+      <p class="k"></p>
+      <h2></h2>
+      <div id="story"></div>
+    </section>
+    <!-- 6. FINAL -->
+  <section id="final" class="rv">
+  <canvas id="fxEnd"></canvas>
+  <div class="end-glow"></div>
+  <div class="end-inner">
+    <p class="end-label">THE NEXT EPISODE</p>
+    <h2 class="end-title">TO BE CONTINUED...</h2>
+    <p class="end-name" id="endName"></p>
+    <p class="end-role" id="endRole"></p>
+    <div id="contact" class="end-btns"></div>
+    <div class="end-replay">
+      <button id="watchAgain">↻ WATCH AGAIN</button>
+      <button id="replayOpening">▶ REPLAY OPENING</button>
+    </div>
+    <p class="end-logo"><b>A</b> SERIES</p>
+    <p class="end-copy" id="endCopy"></p>
+  </div>
+</section>
+  </main>
+  <!-- 7. OVERLAYS -->
+  <div id="reel" class="ov">
+    <div id="bars"></div><button class="x" data-close>✕</button>
+    <div id="slide"></div><i class="zl"></i><i class="zr"></i>
+  </div>
+  <div id="modal" class="ov"><button class="x" data-close>✕</button>
+    <div id="mbody"></div>
+  </div>
+  <div id="" class="ov"><button class="x" data-close>✕</button>
+    <div class="rbox"><iframe id="pdf" title="Resume"></iframe>
+      <a class="btn" id="dl" download>⬇ Download Resume</a>
+    </div>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
