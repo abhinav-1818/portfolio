@@ -1169,7 +1169,7 @@
   order: -1;                                   /* sits right after the hero, before Continue Exploring */
   position: relative;
   max-width: none !important;
-   margin: -105px 0 0 !important;     /* was: margin: 0 !important;  — the minus number moves the logos UP */
+   margin: -105px 2 2 !important;     /* was: margin: 0 !important;  — the minus number moves the logos UP */
   padding: 30px 3.7vw 46px !important;
   overflow: hidden;
   pointer-events: none;                        /* the strip never blocks clicks on the hero buttons */
