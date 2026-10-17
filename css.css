@@ -1160,3 +1160,97 @@
 
 
 /* ============New sectiom================ */
+
+
+
+
+/* ===== TECH STRIP (the icon row after the hero) ===== */
+#tech {
+  order: -1;                                   /* sits right after the hero, before Continue Exploring */
+  position: relative;
+  max-width: none !important;
+   margin: -105px 0 0 !important;     /* was: margin: 0 !important;  — the minus number moves the logos UP */
+  padding: 30px 3.7vw 46px !important;
+  overflow: hidden;
+  pointer-events: none;                        /* the strip never blocks clicks on the hero buttons */
+}
+
+/* soft red glow in the bottom-left corner (fades out, no hard edges) */
+#tech::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 55%;
+  height: 100%;
+  background: radial-gradient(ellipse at 0% 100%, rgba(229, 19, 43, .30), transparent 72%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 35%, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 35%, #000 55%, transparent 100%);
+  pointer-events: none;
+}
+
+.tech-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 26px;
+  overflow-x: auto;
+  padding: 8px 2px 4px;
+  scrollbar-width: none;
+}
+
+.tech-row::-webkit-scrollbar { display: none; }
+
+.tech-item {
+  flex: none;
+  width: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  pointer-events: auto;
+}
+
+.tech-ico {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .02));
+  border: 1px solid rgba(255, 255, 255, .12);
+  box-shadow: 0 0 0 1px rgba(229, 19, 43, .08), 0 12px 26px rgba(0, 0, 0, .38);
+  transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+}
+
+.tech-ico img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.tech-name {
+  font-size: .85rem;
+  font-weight: 500;
+  color: #e0e0e6;
+  text-align: center;
+}
+
+.tech-item:hover .tech-ico {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, .35);
+  box-shadow: 0 0 0 1px rgba(229, 19, 43, .35), 0 16px 30px rgba(0, 0, 0, .5);
+}
+
+/* Continue Exploring used to be pulled up into the hero; now it simply follows the strip */
+#tech + #continue { margin-top: 0; }
+
+@media (max-width: 800px) {
+  #tech { padding: 22px 5vw 30px !important; }
+  .tech-item { width: 80px; }
+  .tech-ico { width: 60px; height: 60px; border-radius: 16px; }
+  .tech-ico img { width: 34px; height: 34px; }
+  .tech-name { font-size: .85rem; }
+}
+
+

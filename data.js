@@ -18,7 +18,7 @@ const DATA = {
     originalLabel: "CLOUD • AUTOMATION • INNOVATION",
     role: "Aspiring Cloud & DevOps Engineer",
     tagline: ["Cloud Engineer", "AWS", "Linux", "Automation"],
-    intro: "I am a B.Sc. Computer Science graduate with a CGPA of 9.14, currently pursuing MCA at Shri V.D. College, Kolpa, Latur. I am attending Cloud Computing classes at Fortune Cloud, Pimpri, and developing practical skills in AWS, Linux, Bash scripting, Python, cloud networking, and DevOps.",
+    intro: "I am a B.Sc. Computer Science graduate with a CGPA of 9.14, currently pursuing MCA at Shri V.D. College, Kolpa, Latur. Learning Cloud Computing at Fortune Cloud, Pimpri, with hands-on focus on AWS, Linux, Python, Bash scripting, networking, and DevOps.",
     location: "Pimpri, Pune, Maharashtra, India",
     email: "dongrajkarabhinav@gmail.com",
     links: {
@@ -29,6 +29,19 @@ const DATA = {
     portrait: "assets/portrait.png",
     interests: ["Amazon Web Services (AWS)", "Cloud Computing", "Linux & Bash Scripting", "Cloud Networking", "DevOps & CI/CD", "Docker & Kubernetes", "Terraform & Infrastructure as Code", "System Design"]
   },
+
+    techStrip: [
+    { name: "AWS", icon: "aws.svg" },
+    { name: "Linux", icon: "linux.svg" },
+    { name: "Docker", icon: "docker.svg" },
+    { name: "Kubernetes", icon: "kubernetes.svg" },
+    { name: "Terraform", icon: "terraform.svg" },
+    { name: "Jenkins", icon: "jenkins.svg" },
+    { name: "GitHub", icon: "github.svg" },
+    { name: "GitLab", icon: "gitlab.svg" },
+    { name: "Python", icon: "python.svg" },
+    { name: "Bash", icon: "bash.svg" }
+  ],
 
   education: [
     { school: "Shri V.D. College, Kolpa, Latur", degree: "Master of Computer Applications (MCA)", period: "August 2026 – Present", score: "Currently Pursuing" },

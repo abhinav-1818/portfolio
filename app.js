@@ -367,3 +367,9 @@ const prStep = () => (prRail.querySelector('.pc')?.offsetWidth || 400) + 18;
 $('#projectNext').onclick = () => prRail.scrollBy({ left: prStep(), behavior: 'smooth' });
 function prArrows() { prWrap.classList.toggle('at-end', prRail.scrollLeft + prRail.clientWidth >= prRail.scrollWidth - 10); }
 prRail.addEventListener('scroll', prArrows, { passive: true }); prArrows();
+
+
+/* ---- Technologies strip ---- */
+$('#techRow').innerHTML = (D.techStrip || []).map(t =>
+  `<div class="tech-item"><span class="tech-ico"><img src="assets/tech/${t.icon}" alt="" loading="lazy" width="40" height="40"></span><span class="tech-name">${t.name}</span></div>`
+).join('');
