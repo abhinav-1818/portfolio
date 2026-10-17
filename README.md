@@ -1,4 +1,4 @@
-# Abhinav — The Series | Portfolio
+# Abhinav — Portfolio
 
 Welcome to my personal portfolio website, designed with a cinematic, streaming-platform-inspired experience.
 
