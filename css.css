@@ -1,0 +1,1162 @@
+/* =====================================================
+   css.css  —  loads after style.css, so it wins
+   1. HERO BUTTONS
+   2. "CONTINUE EXPLORING" HEADING
+   3. THE FULL STORY (resume card)
+   ===================================================== */
+
+
+/* ===== 1. HERO BUTTONS (Play Intro / View Resume / ⓘ) ===== */
+.hero-btns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-btns .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* space between icon and text */
+  height: 52px;
+  /* button height */
+  padding: 0 28px;
+  /* button width (left + right space) */
+  margin: 0;
+  border-radius: 10px;
+  font: 650 .8rem/1 Inter, sans-serif;
+  /* the .8rem is the text size */
+  letter-spacing: -.01em;
+  white-space: nowrap;
+}
+
+.hero-btns .btn svg {
+  width: 20px;
+  /* icon size */
+  height: 20px;
+  flex: none;
+}
+
+/* dark button with a thin border */
+.hero-btns .btn.dark {
+  background: linear-gradient(180deg, #1c1c22, #121216);
+  color: #f4f1ea;
+  border: 1px solid #2a2a33;
+}
+
+.hero-btns .btn.dark:hover {
+  border-color: #4a4a55;
+}
+
+/* round info button */
+.hero-btns .btn.circle {
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #f4f1ea;
+  border: 1px solid #3a3a45;
+}
+
+.hero-btns .btn.circle svg {
+  width: 22px;
+  height: 22px;
+}
+
+.hero-btns .btn.circle:hover {
+  border-color: #fff;
+}
+
+@media (max-width: 800px) {
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-btns .btn {
+    height: 46px;
+    padding: 0 22px;
+    font-size: .95rem;
+  }
+
+  .hero-btns .btn.circle {
+    width: 46px;
+    height: 46px;
+    padding: 0;
+  }
+}
+
+
+/* ===== 2. "CONTINUE EXPLORING" HEADING ===== */
+.c-head h3 {
+  font: 700 1.8rem/1.2 Inter, sans-serif;
+  /* HEADING SIZE: change 1.8rem */
+  letter-spacing: -.03em;
+  color: #f4f1ea;
+}
+
+
+/* ===== 3. THE FULL STORY (resume) ===== */
+#s-story .k {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+#s-story .k::before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  background: var(--acc);
+}
+
+#s-story h2 {
+  font-size: clamp(3rem, 5.2vw, 6.2rem);
+  margin-bottom: 44px;
+}
+
+/* the big resume card */
+.rcard {
+  background: #121217;
+  border: 1px solid #23232b;
+  border-radius: 18px;
+  padding: 50px;
+}
+
+.rhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #26262e;
+}
+
+.rhead small {
+  display: block;
+  color: #8d8d98;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .35em;
+}
+
+.rhead h3 {
+  font: normal clamp(2.4rem, 3.9vw, 4.4rem)/1.05 'Bebas Neue', sans-serif;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  margin: 4px 0 0;
+}
+
+.rcontact {
+  text-align: right;
+  font-size: .9rem;
+  color: #cfcfd6;
+  line-height: 1.7;
+}
+
+.rcontact span {
+  color: #a9a9b3;
+}
+
+.rcontact a:hover {
+  color: #fff;
+}
+
+.rcols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 50px;
+  margin-top: 36px;
+}
+
+/* red section label with a line under it */
+.rh {
+  color: #ff3355;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  padding-bottom: 14px;
+  margin: 38px 0 18px;
+  border-bottom: 1px solid #2a2a33;
+}
+
+.rcols>div>.rh:first-child {
+  margin-top: 0;
+}
+
+.ri {
+  margin-bottom: 18px;
+}
+
+.rrow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.rrow b {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f4f1ea;
+}
+
+.rrow span {
+  color: #8d8d98;
+  font-size: .9rem;
+  white-space: nowrap;
+}
+
+.ri p {
+  color: #a9a9b3;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.ri p b {
+  color: #f4f1ea;
+  font-weight: 600;
+}
+
+/* bullets with a red dot */
+.rbul {
+  list-style: none;
+  margin: 10px 0 0;
+}
+
+.rbul li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 8px;
+  color: #cfcfd6;
+  font-size: .95rem;
+  line-height: 1.65;
+}
+
+.rbul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .75em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ff3355;
+}
+
+.rtxt {
+  color: #a9a9b3;
+  font-size: .9rem;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.rtxt b {
+  color: #f4f1ea;
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .rcols {
+    grid-template-columns: 1fr;
+  }
+
+  .rhead {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rcontact {
+    text-align: left;
+  }
+
+  .rcard {
+    padding: 28px 22px;
+  }
+}
+
+
+
+
+/* STORY / RESUME WIDTH FIX */
+#s-story #story {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: 0;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Keep the education timeline inside the width */
+#s-story #story .tl {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Keep the resume buttons aligned */
+#s-story #story .btn {
+  margin-top: 18px;
+}
+
+/* Responsive screens */
+@media (max-width: 768px) {
+  #s-story #story {
+    max-width: 100%;
+  }
+}
+
+
+
+/* CONTINUE EXPLORING — MOVE UP */
+/* Move Continue Exploring below the hero buttons */
+#continue {
+  margin-top: -115px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Make the section heading smaller */
+#continue h2 {
+  font-size: 22px;
+}
+
+/* Make the card titles smaller */
+#continue h3,
+#continue .card-title {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* Make the card descriptions smaller */
+#continue p {
+  font-size: 12px;
+}
+
+
+
+
+
+/* Hide scrollbar only in Originals */
+
+
+#s-originals .rail::-webkit-scrollbar,
+#s-originals [style*="overflow-x"]::-webkit-scrollbar,
+#s-originals [style*="overflow: auto"]::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+
+
+/* Condensed font for skill category titles only */
+#s-skills .skill-category-heading {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase;
+  
+}
+
+
+
+.project-card-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.project-card-buttons .btn {
+  margin: 0;
+}
+
+.project-card-buttons .github-btn {
+  background: transparent;
+  color: #f4f1ea;
+  border: 1px solid #444;
+}
+
+
+/* Adjust project buttons */
+.project-card-buttons .btn {
+  padding: 9px 16px;
+  font-size: 14px;
+  margin: 0;
+}
+
+
+
+/* Hide scrollbar only in the Projects section */
+#s-originals #projects {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#s-originals #projects::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+/* ===== OPENING ANIMATION: name → portrait → tagline → PLAY ===== */
+#open .o-glow {
+  left: 50%;
+  top: 50%;
+  width: 90vw;
+  height: 70vh;
+  transform: translate(-50%, -50%) scale(.6);
+  background: radial-gradient(ellipse, rgba(229, 19, 43, .38), transparent 65%);
+  will-change: transform, opacity;
+  transition: opacity 1.6s ease, transform 2s cubic-bezier(.2, .7, .2, 1);
+}
+
+#open.s1 .o-glow {
+  opacity: .8;
+  transform: translate(-50%, -50%) scale(.8);
+}
+
+#open.s2 .o-glow {
+  opacity: 1;
+  transform: translate(-50%, calc(-50% + 12vh)) scale(1.05);
+}
+
+/* name + THE SERIES (they appear together, then slide up) */
+#open .o-title {
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  will-change: transform, opacity;
+  transition: opacity 1.2s ease, transform 1.6s cubic-bezier(.2, .7, .2, 1);
+}
+
+#open.s1 .o-title {
+  opacity: 1;
+}
+
+#open.s2 .o-title {
+  transform: translate(-50%, calc(-50% - 28vh));
+}
+
+.o-name {
+  font-size: clamp(4rem, 13vw, 14rem);
+  line-height: .95;
+  letter-spacing: .14em;
+  color: #f4f1ea;
+  transition: letter-spacing 2.2s cubic-bezier(.2, .7, .2, 1);
+}
+
+#open.s1 .o-name {
+  letter-spacing: .06em;
+}
+
+.o-series {
+  margin-top: .7rem;
+  padding-left: .7em;
+  color: var(--acc);
+  font-size: clamp(.8rem, 1.3vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: .7em;
+}
+
+/* portrait: fades in from blurred */
+#open .o-pic {
+  left: 50%;
+  bottom: 0;
+  z-index: 2;
+  height: 68vh;
+  width: auto;
+  max-width: 92vw;
+  transform: translate(-50%, 40px) scale(1.04);
+  filter: blur(18px);
+  -webkit-mask-image: linear-gradient(#000 80%, transparent);
+  mask-image: linear-gradient(#000 80%, transparent);
+  will-change: transform, opacity, filter;
+  transition: opacity 1.6s ease, filter 1.6s ease, transform 1.8s cubic-bezier(.2, .7, .2, 1);
+}
+
+#open.s2 .o-pic {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(-50%, 0) scale(1);
+}
+
+/* tagline */
+#open .o-tag {
+  left: 50%;
+  bottom: 17vh;
+  z-index: 3;
+  transform: translate(-50%, 14px);
+  white-space: nowrap;
+  color: #ece6da;
+  font-size: clamp(.65rem, 1vw, .85rem);
+  font-weight: 600;
+  letter-spacing: .3em;
+  text-shadow: 0 2px 12px #000;
+  transition: opacity .9s ease, transform .9s ease;
+}
+
+#open.s3 .o-tag {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* PLAY button */
+#open .o-play {
+  left: 50%;
+  bottom: 6vh;
+  z-index: 3;
+  transform: translate(-50%, 14px);
+  padding: 16px 34px;
+  border-radius: 40px;
+  background: #f4f1ea;
+  color: #0a0a0d;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  box-shadow: 0 0 30px rgba(229, 19, 43, .35);
+  pointer-events: none;
+  transition: opacity .9s ease, transform .9s ease;
+}
+
+#open.s4 .o-play {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+#open.s4 .o-play:hover {
+  transform: translate(-50%, -3px);
+}
+
+/* used by "Replay Opening" so it restarts cleanly */
+#open.reset,
+#open.reset * {
+  transition: none !important;
+}
+
+@media (max-width: 800px) {
+  #open .o-pic {
+    height: 56vh;
+  }
+
+  #open.s2 .o-title {
+    transform: translate(-50%, calc(-50% - 30vh));
+  }
+
+  #open .o-tag {
+    bottom: 15vh;
+    width: 90%;
+    white-space: normal;
+    text-align: center;
+    letter-spacing: .18em;
+  }
+}
+
+
+/* Increase skill card width */
+#s-skills .tiles > button {
+  min-width: 200px;
+  width: 200px;
+
+}
+
+
+/* Add spacing between skill cards */
+#s-skills #tiles {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+}
+
+#s-skills #tiles > button {
+  margin: 0 !important;
+}
+
+
+
+/* Condensed font for skill category headings */
+#s-skills #cats button {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  line-height: 1.1 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Keep category descriptions readable */
+#s-skills #cats button small {
+  display: block;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+
+
+
+/* Opening: show only the name, no portrait / tagline / PLAY button */
+#open .o-pic,
+#open .o-tag,
+#open .o-play {
+  display: none !important;
+}
+
+
+
+
+/* Overlays: full screen, on top, hides the website behind */
+.ov {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s;
+}
+.ov.on {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+/* Play Intro: plain dark screen */
+#reel {
+  background: #000 !important;
+}
+
+
+
+
+#modal {
+  background-color: #07070a;   /* only a fallback, the card colour is applied by app.js */
+}
+
+
+/* Hero portrait: make sure it is visible */
+#pic {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+.portrait {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+
+
+/* ===== Opening: small line → ABHINAV (blur-in) → THE SERIES → home ===== */
+
+/* 1) small line, alone in the centre */
+#open .o-pre {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding-left: .6em;               /* keeps the spaced letters centred */
+  text-align: center;
+  color: #8d8d98;
+  font-size: clamp(.55rem, .85vw, .75rem);
+  font-weight: 600;
+  letter-spacing: .6em;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+#open.s1 .o-pre { opacity: 1; }
+#open.sname .o-pre { opacity: 0; }   /* fades out as the name arrives */
+
+/* 2) big name: starts blurred and wide, then sharpens */
+#open .o-name {
+  opacity: 0;
+  filter: blur(18px);
+  letter-spacing: .3em;
+  transition: opacity 1.4s ease, filter 1.6s ease, letter-spacing 2s cubic-bezier(.2, .7, .2, 1);
+}
+#open.s1 .o-name { letter-spacing: .3em; }   /* overrides the old s1 rule */
+#open.sname .o-name {
+  opacity: 1;
+  filter: blur(0);
+  letter-spacing: .06em;
+}
+
+/* 3) THE SERIES */
+#open .o-series {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+#open.sseries .o-series { opacity: 1; }
+
+
+
+
+/* =====================================================
+   MOBILE (phones and small tablets)
+   ===================================================== */
+@media (max-width: 800px) {
+
+  /* ---- general ---- */
+  section { padding: 64px 5vw; }
+
+
+
+  /* ---- opening ---- */
+  .o-name { font-size: clamp(3rem, 17vw, 6rem); }
+  .o-series { letter-spacing: .4em; }
+  #open .o-pre { letter-spacing: .35em; padding: 0 6vw; }
+
+  /* ---- hero ---- */
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 150px;
+    min-height: auto;
+  }
+  .hero-text { padding-bottom: 0; }
+  #big { font-size: clamp(3.6rem, 19vw, 7rem); }
+  .lead { margin-left: auto; margin-right: auto; font-size: .95rem; }
+  .portrait { max-width: 320px; margin-top: 24px; }
+  .chip { display: none; }
+
+  /* ---- continue exploring ---- */
+  #continue { margin-top: 0; }
+  .c-head h3 { font-size: 1.4rem; }
+  .arr { display: none !important; }          /* phones swipe instead */
+  .cc { width: 200px; height: 118px; }
+
+  /* ---- journey ---- */
+  .tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .tabs button { white-space: nowrap; }
+  .eps { grid-template-columns: 1fr; }
+
+  /* ---- projects ---- */
+  .pc { width: 82vw; min-height: 340px; padding: 22px; }
+  .pc h3 { font-size: 2.2rem; }
+  .more { display: none; }
+
+  /* ---- top picks ---- */
+  .picks .n { font-size: 6rem; }
+  .picks .tc { width: 150px; height: 215px; }
+
+  /* ---- skills ---- */
+  #s-skills .skills { grid-template-columns: 1fr; gap: 20px; }
+  #s-skills #cats { display: flex; overflow-x: auto; gap: 8px; scrollbar-width: none; }
+  #s-skills #cats button {
+    white-space: nowrap;
+    width: auto;
+    font-size: 22px !important;
+    padding: 8px 12px;
+  }
+  #s-skills #cats button small { display: none !important; }
+  #s-skills #tiles { gap: 10px !important; }
+  #s-skills #tiles > button {
+    width: calc(50% - 5px) !important;
+    min-width: 0 !important;
+  }
+
+  /* ---- resume card ---- */
+  .rcard { padding: 24px 18px; }
+  .rrow { flex-direction: column; gap: 2px; }
+  .rrow span { white-space: normal; }
+  .rhead h3 { font-size: 2.4rem; }
+
+  /* ---- achievements ---- */
+  .posters { grid-template-columns: 1fr; }
+  .certs a { width: 200px; }
+
+  /* ---- footer ---- */
+  #contact, .end-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .end-replay { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+
+  /* ---- overlays (View Project / Play Intro / Resume) ---- */
+  #mbody { padding: 80px 20px 40px; }
+  #mbody h2 { font-size: clamp(2.4rem, 12vw, 4rem); }
+  .mets { grid-template-columns: 1fr 1fr; }
+  #slide { padding: 20px; }
+  #slide h2 { font-size: clamp(2.8rem, 15vw, 5rem); }
+  .rbox { padding: 70px 10px 10px; }
+}
+
+/* very small phones */
+@media (max-width: 380px) {
+  .hero-btns .btn { padding: 0 16px; font-size: .85rem; }
+  .pc { width: 88vw; }
+}
+
+
+
+
+
+/* Responsive Styles code */
+
+
+
+/* =====================================================
+   MOBILE HERO — cinematic portrait layout matching the
+   supplied reference (desktop styles remain unchanged)
+   ===================================================== */
+@media (max-width: 800px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+
+  
+
+  /* Keep the intro animation, but don't show its Skip Intro control. */
+  #skip {
+    display: none !important;
+  }
+
+  #home.hero {
+    position: relative;
+    display: block;
+    isolation: isolate;
+    width: 100%;
+    max-width: none;
+    min-height: 100svh;
+    height: auto;
+    overflow: hidden;
+    padding: clamp(350px, 96vw, 430px) 20px 38px;
+    text-align: left;
+    background:
+      linear-gradient(to bottom,
+        rgba(7, 7, 10, 0) 0%,
+        rgba(7, 7, 10, .04) 32%,
+        rgba(7, 7, 10, .78) 52%,
+        #07070a 73%),
+      radial-gradient(circle at 76% 25%, rgba(229, 19, 43, .24), transparent 52%),
+      #07070a;
+  }
+
+  #home .portrait {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    height: clamp(410px, 112vw, 500px);
+    margin: 0;
+    transform: none !important;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  #home .portrait img,
+  #pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center 18%;
+    -webkit-mask-image: linear-gradient(to bottom, #000 58%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 58%, transparent 100%);
+  }
+
+  #home .hero-text {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 680px;
+    margin: 0;
+    padding: 0;
+    align-self: auto;
+    text-align: left;
+    animation: none;
+  }
+
+  #home .eyebrow {
+    margin: 0 0 3px;
+    font-size: .78rem;
+    letter-spacing: .28em;
+  }
+
+  #home #big {
+    margin: 0;
+    max-width: 100%;
+    font-size: clamp(3.1rem, 12vw, 4.2rem);
+    line-height: .96;
+    letter-spacing: -.025em;
+    overflow-wrap: anywhere;
+  }
+
+  #home .series {
+    margin: 7px 0 16px;
+    font-size: .82rem;
+    letter-spacing: .42em;
+  }
+
+  #home .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    margin: 0 0 12px;
+    font-size: .72rem;
+    line-height: 1.65;
+    text-align: left;
+  }
+
+  #home .role {
+    margin: 13px 0 14px;
+    font-size: .64rem;
+    line-height: 1.7;
+    letter-spacing: .18em;
+    overflow-wrap: anywhere;
+  }
+
+  #home .lead {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 0 25px;
+    font-size: .91rem;
+    line-height: 1.6;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+
+  #home .hero-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+  }
+
+  #home .hero-btns .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-width: 0;
+    min-height: 46px;
+    margin: 0;
+    padding: 0 14px;
+    border-radius: 7px;
+    font-size: .83rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    flex: 1 1 auto;
+  }
+
+  #home .hero-btns .btn svg {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 auto;
+  }
+
+  #home .hero-btns .btn.circle {
+    flex: 0 0 46px;
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  #home .chip { display: none !important; }
+
+  /* Keep the following sections flowing naturally below the hero. */
+  #continue { margin-top: 0; }
+}
+
+@media (max-width: 380px) {
+  #home.hero { padding-left: 16px; padding-right: 16px; }
+  #home #big { font-size: clamp(2.8rem, 11.5vw, 3.25rem); }
+  #home .hero-btns { gap: 7px; }
+  #home .hero-btns .btn { padding: 0 10px; font-size: .76rem; }
+  #home .hero-btns .btn.circle { flex-basis: 42px; width: 42px; min-width: 42px; height: 42px; }
+}
+
+
+
+/* ===== Mobile hamburger navigation ===== */
+.nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  flex: 0 0 42px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform .25s ease, opacity .2s ease;
+}
+
+.nav-toggle:focus-visible { outline: 2px solid var(--acc, #f21d3d); outline-offset: 3px; }
+
+@media (max-width: 768px) {
+  #nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 42px;
+    padding: 5px 15px;
+    background: rgba(7, 7, 10, .92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  #nav.menu-open { transform: none !important; }   /* never hide the bar while the menu is open */
+
+  #nav .logo { margin-right: auto; font-size: .83rem; letter-spacing: .24em; gap: 7px; }
+  #nav .logo b { font-size: 1.45rem; }
+  #nav .nav-toggle { display: flex; position: relative; z-index: 52; }
+  #nav #who-btn { display: none !important; }
+
+  /* the list that opens under the bar */
+  #nav #links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    flex: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: min(70vh, 520px);
+    overflow-y: auto;
+    padding: 8px 15px 14px;
+    background: rgba(7, 7, 10, .98);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .35);
+  }
+
+  #nav #links.is-open { display: flex; }
+
+  #nav #links a {
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+    padding: 10px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+    font-size: .95rem;
+    letter-spacing: .04em;
+    color: #e7e7ec;
+  }
+
+  #nav #links a:last-child { border-bottom: 0; }
+  #nav #links a:hover,
+  #nav #links a.on { color: var(--acc, #f21d3d); }
+
+  /* two lines turn into an X when open */
+  #nav.menu-open .nav-toggle span:nth-child(1) { transform: translateY(4px) rotate(45deg); }
+  #nav.menu-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle span { transition: none; }
+}
+
+
+
+/* phone: start the photo below the navbar */
+@media (max-width: 800px) {
+  #home .portrait {
+    top: 60px;                                    /* photo starts 60px from the top, under the navbar */
+  }
+
+  #home.hero {
+    padding-top: calc(clamp(350px, 96vw, 430px) + 60px);   /* moves the text down by the same amount */
+  }
+}
+
+/* hide the phone menu until the button is tapped */
+@media (max-width: 768px) {
+  #nav #links { display: none !important; }
+  #nav #links.is-open { display: flex !important; }
+}
+
+
+/* ===== EMAIL MENU (Gmail / mail app / copy) ===== */
+#mailMenu {
+  position: fixed;
+  z-index: 400;
+  min-width: 230px;
+  padding: 8px;
+  background: #14141a;
+  border: 1px solid #2a2a33;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .6);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+}
+
+#mailMenu.on {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+}
+
+#mailMenu .mm-title {
+  margin-bottom: 6px;
+  padding: 8px 12px 10px;
+  border-bottom: 1px solid #26262e;
+  font-size: .75rem;
+  color: #8d8d98;
+  word-break: break-all;
+}
+
+#mailMenu a,
+#mailMenu button {
+  display: block;
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: .9rem;
+  font-weight: 600;
+  color: #f4f1ea;
+}
+
+#mailMenu a:hover,
+#mailMenu button:hover { background: #202028; }
+
+
+
+/* ============New sectiom================ */
